@@ -9,6 +9,8 @@ class Periodictask < ActiveRecord::Base
   # the above (attr_accessible *column_names) does not work for some reason
   attr_protected
 
+  include PeriodictaskHelper
+
   after_initialize do |task|
     if task.new_record?
       task.interval_number ||= 1
@@ -74,7 +76,7 @@ class Periodictask < ActiveRecord::Base
   end
 
   def fill_checklists(issue)
-    if checklists_template_id && Redmine::Plugin.all.any? {|p| p.id == :redmine_checklists} && Object.const_defined?('ChecklistTemplate')
+    if checklists_template_id && checklistPluginInstalled?
       template = ChecklistTemplate.find(checklists_template_id)
       if template
         items = template.template_items.split("\n")
