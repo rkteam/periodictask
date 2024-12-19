@@ -39,7 +39,7 @@
     <%= label(:periodictask, :issue_category_id, l(:label_issue_category)) %>
 
     <% if @categories.length > 0 %>
-      <%= f.select :issue_category_id, principals_options_for_select(@categories, @periodictask.issue_category), :include_blank => true, :required => true %>
+      <%= collection_select("periodictask", "issue_category_id", @categories, :id, :name, include_blank: true ) %>
     <% else %>
       <%= l(:no_categories_in_project) %>
     <% end %>
