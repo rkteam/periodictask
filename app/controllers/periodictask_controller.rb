@@ -1,5 +1,4 @@
 class PeriodictaskController < ApplicationController
-  unloadable
 
   before_action :find_project_by_project_id, :load_users
   before_action :load_categories, :except => [:destroy]
