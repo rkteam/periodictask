@@ -4,6 +4,7 @@
 In some projects there are tasks that need to be assigned on a schedule. Such as check the ssl registration once per year or run security checks every 3 months
 
 
+
 ## Installation
 
 1. `cd </path/to/redmine/dir>`
@@ -77,10 +78,10 @@ redmine-periodictask supports [redminecrm checklist PRO](https://www.redmineup.c
 - [jperelli](https://github.com/jperelli/Redmine-Periodic-Task) (Maintainer)
 - [Tanguy de Courson](https://github.com/myneid/) (Original Author)
 
-
- - [yzzy](https://github.com/yzzy)
- - [s-andy](https://github.com/s-andy)
- - [tuzumkuru](https://github.com/tuzumkuru) redmine v6 support
+## Top Contributors
+- [yoshiaki tanaka](https://github.com/wate)
+- [yzzy](https://github.com/yzzy)
+- [s-andy](https://github.com/s-andy)
 
 ## License
 
