@@ -7,3 +7,9 @@ module RedminePeriodictask
     end
   end
 end
+
+# rubocop:disable Style/IfUnlessModifier
+unless Project.included_modules.include?(RedminePeriodictask::ProjectPatch)
+  Project.send(:include, RedminePeriodictask::ProjectPatch)
+end
+# rubocop:enable Style/IfUnlessModifier
