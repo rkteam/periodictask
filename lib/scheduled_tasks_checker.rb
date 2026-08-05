@@ -6,7 +6,7 @@ class ScheduledTasksChecker
 
     Time.zone = User.current.time_zone
     now = Time.zone.now
-    Periodictask.where("(next_run_date <= ? OR next_run_date IS null) and is_disabled = ? ", now, false).each do |task|
+    Periodictask.where("(next_run_date <= ? OR next_run_date IS null) and is_active = ?", now, true).each do |task|
       issue = task.generate_issue(now)
       if issue
         begin
