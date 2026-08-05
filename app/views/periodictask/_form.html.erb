@@ -3,7 +3,7 @@
 <%= f.hidden_field :project_id %>
 <div class="box tabular">
 
-  <p><%= label(:periodictask, :is_disabled, l(:label_disabled)) %><%= f.check_box :is_disabled %> </p>
+  <p><%= label(:periodictask, :is_active, l(:field_active)) %><%= f.check_box :is_active %> </p>
   <p>
     <%= label(:periodictask, :next_run_date, l(:label_next_run_date)) %>
     <%= f.datetime_select :next_run_date, :include_blank => true, :start_year => Time.now.year %>
